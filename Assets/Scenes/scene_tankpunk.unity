@@ -182,7 +182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: TANK PUNK
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9b3dd9348c2b8944a409f1db3aee57a, type: 2}
   m_sharedMaterial: {fileID: 7843444804695662003, guid: c9b3dd9348c2b8944a409f1db3aee57a, type: 2}
@@ -209,7 +209,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 108.6
+  m_fontSize: 36
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -730,6 +730,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1040726064 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 583027834190615940, guid: da977cf511e30d748b669b7941b05cda, type: 3}
+  m_PrefabInstance: {fileID: 1821155788}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1350473492
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -887,6 +892,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5469843517295552522, guid: da977cf511e30d748b669b7941b05cda, type: 3}
+      propertyPath: _explosionPoint
+      value: 
+      objectReference: {fileID: 2139610970}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da977cf511e30d748b669b7941b05cda, type: 3}
 --- !u!1 &1935706248
@@ -1200,6 +1209,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!4 &2139610970 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 583027834190615940, guid: 2031f2cab0747a8458b703d0238be198, type: 3}
+  m_PrefabInstance: {fileID: 5775754355452900673}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1663325023057195861
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1430,6 +1444,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5775754355452900675, guid: 2031f2cab0747a8458b703d0238be198, type: 3}
+      propertyPath: _explosionPoint
+      value: 
+      objectReference: {fileID: 1040726064}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2031f2cab0747a8458b703d0238be198, type: 3}
 --- !u!1001 &7062222404829295186

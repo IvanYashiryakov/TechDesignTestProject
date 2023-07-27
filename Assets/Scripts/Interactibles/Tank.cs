@@ -4,6 +4,9 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class Tank : MonoBehaviour, IInteractible
 {
+    [SerializeField] private Explosion _explosionPrefab;
+    [SerializeField] private Transform _explosionPoint;
+
     private Animator _animator;
     private AudioSource _audioSource;
 
@@ -13,9 +16,16 @@ public class Tank : MonoBehaviour, IInteractible
         _audioSource = GetComponent<AudioSource>();
     }
 
+    private void Shot()
+    {
+        Explosion explosion = Instantiate(_explosionPrefab);
+        explosion.transform.position = _explosionPoint.position;
+    }
+
     public void Interact()
     {
         _animator.SetBool("Shot", true);
+        Shot();
         _audioSource.Play();
     }
 }
