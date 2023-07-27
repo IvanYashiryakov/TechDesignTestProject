@@ -11,4 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/scene_tankpunk.unity
     guid: 1da9f5f461603b6458893ba2794f47f6
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 32b4fc9baf8d1574db44eb0a7de80947, type: 2}
+    com.unity.localization.settings: {fileID: 11400000, guid: 303bbf057dcaa034bac9e6cfacda0d00, type: 2}
