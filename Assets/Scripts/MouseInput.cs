@@ -27,8 +27,10 @@ public class MouseInput : MonoBehaviour
 
         foreach (var collider in _colliderResults)
         {
-            if (collider.TryGetComponent(out IInteractible component) == true)
-                component.Interact();
+            IInteractible[] interactibles = collider.GetComponentsInChildren<IInteractible>();
+
+            foreach (var interactible in interactibles)
+                interactible.Interact();
         }
     }
 }
