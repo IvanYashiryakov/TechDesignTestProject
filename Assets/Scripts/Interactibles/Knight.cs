@@ -2,6 +2,8 @@ using Spine;
 using Spine.Unity;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(SkeletonAnimation))]
 public class Knight : MonoBehaviour, IInteractible
 {
     [SpineAnimation] public string walkAnimationName;
@@ -9,6 +11,7 @@ public class Knight : MonoBehaviour, IInteractible
 
     private SkeletonAnimation skeletonAnimation;
     private Spine.AnimationState spineAnimationState;
+    private AudioSource _audioSource;
 
     private void OnEnable()
     {
@@ -20,6 +23,11 @@ public class Knight : MonoBehaviour, IInteractible
     private void OnDisable()
     {
         spineAnimationState.Complete -= OnComplete;
+    }
+
+    private void Start()
+    {
+        _audioSource = GetComponent<AudioSource>();
     }
 
     private void OnComplete(TrackEntry trackEntry)
@@ -37,6 +45,7 @@ public class Knight : MonoBehaviour, IInteractible
     private void Hit()
     {
         spineAnimationState.SetAnimation(0, hitAnimationName, false);
+        _audioSource.Play();
         SignalsManager.Instance.Send(new KnightHitted());
     }
 
